@@ -1,0 +1,134 @@
+.main {
+  padding-bottom: 10rpx;
+  background: #f9f9f9;
+}
+.top-bar {
+  width: 100%;
+  height: 8rpx;
+  background: linear-gradient(90deg,#7fccf6 50%, #eab687 50%);
+  background-size: 200rpx 100%; 
+}
+
+.table-num {
+  height: 120rpx; 
+  padding: 0 20rpx;
+}
+.table-num__section {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  font-size: 40rpx;
+  line-height: 120rpx;
+}
+.table-num__picker {
+  width: 90%;
+}
+.table-num__icon {
+  width: 10%;
+  font-size: 50rpx;
+  color: #d8d8d8;
+}
+
+
+.order-details , .order-mark{
+  margin-top: 10rpx;
+  padding: 30rpx 20rpx;
+}
+
+.order-details__tax {
+  display: flex;
+  align-items: center;
+  padding: 25rpx 25rpx 0 0rpx;
+  font-size: 35rpx;
+  color: #8a8a8a;
+}
+
+.order-details__foodTaxName {
+  width: 60%;
+}
+.order-details__foodTax {
+  width: 20%;
+  text-align: right;
+}
+.order-details__foodTaxPrice {
+  width: 40%;
+  text-align: right;
+}
+
+.order-details__foodItem {
+  display: flex;
+  align-items: center;
+  padding: 25rpx 25rpx 0 0rpx;
+  font-size: 35rpx;
+  color: #8a8a8a;
+}
+
+
+.order-details__foodName {
+  width: 60%;
+}
+.order-details__foodQuantity {
+  width: 20%;
+  text-align: right;
+}
+
+.order-details__foodPrice {
+  width: 40%;
+  text-align: right;
+}
+.order-details__discountItems {
+  display: flex;
+  align-items: center;
+  padding: 10rpx 0;
+  font-size: 35rpx;
+  color: #ff8104;
+}
+.order-details__discountName {
+  width: 85%;
+}
+.order-details__discountPrice {
+  width: 15%;
+  text-align: center;
+}
+
+
+.order-hp__textarea {
+  width: 100%;
+  height:  30rpx;
+  margin-top: 20rpx;
+  padding: 20rpx 0;
+  font-size: 30rpx;
+  border-top: 1rpx solid #eee;
+}
+
+.order-mark__textarea {
+  width: 100%;
+  height:  70rpx;
+  margin-top: 20rpx;
+  padding: 20rpx 0;
+  font-size: 30rpx;
+  border-top: 1rpx solid #eee;
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100rpx;
+  padding: 0 20rpx;
+  background: #2e2e2e;
+}
+.footer__totalPrice {
+  width: 60%;
+  color: #fff;
+}
+.footer__confirm {
+  width: 40%;
+  line-height: 100rpx;
+  text-align: center;
+  color: #fff;
+  background: #ff8104;
+}

@@ -1,0 +1,12 @@
+<view class="main">
+  <view class="top-bar"></view>
+
+  <view class="order-details white-bg">
+    <text class="order-details__foodName">订单结果\n\n</text>
+
+      <text class="order-details__foodName">{{res_re}}</text>
+
+
+  </view>
+</view>
+

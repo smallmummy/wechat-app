@@ -1,0 +1,71 @@
+<!--index.wxml-->
+<view class="index">
+
+    <view class="header">
+        <view wx:for="{{navs}}" wx:for-index="i" wx:for-item="nav" wx:key="id">
+            <view bindtap="changeType" data-totypeid="{{nav.id}}" class="{{i==currentTypeId?'active':''}}">
+                <text>{{nav.type}}</text>
+            </view>
+        </view>
+    </view>
+
+        <view class="main">
+            <view wx:for="{{foods}}" wx:for-index="key" wx:key="id" wx:for-item="food">
+                <view class="section" wx:if="{{currentTypeId==food.typeid}}">
+                    <view class="section-t">
+                        <image src="{{food.imgUrl}}"/>
+                        <text>{{food.name}}</text>
+                    </view>
+                    <view class="section-b">
+                        <view class="price">
+                            <text class="font-orange b">IDR </text>
+                            <text class="font-orange fz-50">{{food.price_str}}</text>
+                            
+                        </view>
+                       <!--
+                        <view class="monthly-sales">
+                            月销
+                            <text class="font-orange">{{food.sales}}</text>
+                            份
+                        </view>
+                        -->
+
+                        <view class="quantity-wrap">
+                            <view bindtap="ctrlFood" data-key='{{key}}' data-action="del" hidden="{{food.quantity<=0}}"
+                                  class="btn-ctrl-quantity btn-del">-
+                            </view>
+                            <text class="quantity" hidden="{{food.quantity<=0}}">{{food.quantity}}</text>
+                            <view bindtap="ctrlFood" data-key="{{key}}" data-action="add"
+                                  class="btn-ctrl-quantity btn-add">+
+                            </view>
+                        </view>
+
+                    </view>
+                </view>
+            </view>
+        </view>
+
+    <view class="footer">
+        <view class="total-price" bindtap="carToggle">
+            <text>{{totalPrice_str}}</text>
+            <image src="/images/cart.png"></image>
+        </view>
+       
+        <view class="tips">
+            <text wx:if="{{totalPrice<20}}">20元起</text>
+            <navigator url="../checkOrder/checkOrder" wx:if="{{totalPrice>=20}}" class="font-orange" 
+            bindtap="checkOrder">去结算</navigator>
+        </view>
+    </view>
+
+    <!--- <view class="car-details" wx:if="{{carToggle}}">
+        <text class="car-details__text--empty" wx:if="{{totalPrice !== 0}}">购物车为空</text>  
+        <view class="car-details__item" wx:for="{{foods}}" wx:for-item="food" wx:for-index="key"
+        wx:if="{{food.quantity}}">
+            <view class="car-details__name">{{food.name}}</view>
+            <view class="car-details__quantity">{{food.quantity}}</view>
+        </view>
+    </view> -->
+
+
+</view>

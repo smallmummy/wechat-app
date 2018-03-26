@@ -1,0 +1,171 @@
+/**index.wxss**/
+.index {
+  min-height: 100%;
+  padding-top: 90rpx;
+  padding-bottom: 100rpx;
+  font-family: -apple-system-font,Helvetica Neue,Helvetica,sans-serif;
+  background: #eee;
+}
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  height: 90rpx;
+  font-size: 30rpx;
+  color: #fff;
+  background: #212121;
+  overflow: hidden;
+}
+.header view {
+  line-height: 85rpx;
+}
+.header text {
+  padding: 30rpx 25rpx;
+}
+.header .active {
+  color: #ff8104;
+  border-bottom: 5rpx solid #ff8104;
+}
+
+.section-t {
+  position: relative;
+  height: 350rpx;
+  overflow: hidden;
+}
+.section-t image{
+  width: 750rpx;
+  height: 350rpx;
+}
+.section-t text {
+  position: absolute;
+  left: 0;bottom: 0;
+  width: 100%;
+  height: 80rpx;
+  text-indent: 30rpx;
+  line-height: 80rpx;
+  color: #fff;
+  background: rgba(10,10,10,.7);
+}
+
+.section-b {
+  height: 100rpx;
+  font-size: 35rpx;
+  color: #c7c7c7;
+  background: #fff;
+  border-width: 10rpx;
+  border-bottom-style:double;
+}
+.price {
+  float: left;
+  margin-left: 30rpx;
+  line-height: 90rpx;
+}
+.monthly-sales {
+  float:left;
+  margin-left: 40rpx;
+  line-height: 100rpx;
+}
+
+.quantity-wrap {
+  float: right;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 30rpx;
+}
+.quantity {
+  width: 80rpx;
+  text-align: center;
+  color: #212121;
+}
+.btn-ctrl-quantity {
+  width: 60rpx;
+  height: 60rpx;
+  margin: 20rpx auto;
+  text-align: center;
+  line-height: 60rpx;
+  font-size: 50rpx;
+  border-radius: 50%; 
+}
+.btn-add {
+  color: #fff;
+  background: #ff8104;
+}
+.btn-del {
+  color: #ccc; 
+  box-shadow: 0 0 0 2rpx #ccc inset;
+}
+
+
+
+.footer {
+  position: fixed;
+  bottom: 0;left: 0;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100rpx;
+  line-height: 100rpx;
+  color: #8f8f8f;
+  background: #2e2e2e;
+  z-index: 100;
+}
+.total-price {
+  position: relative;
+  width: 60%;
+  padding:0 20rpx;
+  text-align: center;
+  color: #c1c1c1;
+  border-right: 5rpx solid #3f3f3f;
+}
+.total-price image {
+  position:absolute;
+  left: 20rpx;
+  bottom: 15rpx;
+  width: 120rpx;
+  height: 120rpx;
+}
+/*.trans-costs {
+  width: 230rpx;
+  padding-left: 20rpx;
+  font-size: 32rpx;
+}*/
+.tips {
+  width: 40%;
+  text-align: center;
+  font-size: 35rpx;
+  background: #2a2a2a;
+}
+
+
+/*购物车详情  car-details*/
+/*.car-details {
+  position: fixed;
+  left: 0;
+  bottom: 100rpx;
+  width: 100%;
+  padding: 20rpx 0 40rpx 30rpx;
+  background: #2a2a2a;
+}
+.car-details__item {
+  display: flex;
+  width: 100%;
+  line-height: 50rpx;
+  color: #c1c1c1;
+}
+.car-details__name {
+  width: 85%;
+}
+.car-details__quantity {
+  flex-grow: 1;
+}
+.car-details__text--empty {
+  text-align: center;
+  font-size: 40rpx;
+  color: #ff8104;
+}*/

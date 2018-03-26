@@ -1,0 +1,32 @@
+/**app.wxss**/
+
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+}
+.text-center {
+  text-align: center;
+}
+.b{
+  font-weight: bold;
+}
+.font-orange {
+  color: #ff7900;
+}
+.clear {
+  clear: both;
+}
+.fz-50 {
+  font-size: 50rpx;
+}
+.lh-100 {
+  line-height: 100rpx;
+}
+.white-bg {
+  background: #fff;
+}

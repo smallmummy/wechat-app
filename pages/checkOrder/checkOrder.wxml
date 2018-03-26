@@ -1,0 +1,66 @@
+<view class="main">
+<!--
+  <view class="top-bar"></view>
+
+
+  <view class="table-num white-bg">
+      <picker bindchange="bindPickerChange" value="{{tableIdx}}" range="{{tableNum}}">
+        <view class="table-num__section">
+          <view class="table-num__picker">
+            请选择桌号：{{tableNum[tableIdx]}} 号
+          </view>
+          <view class="table-num__icon">></view>
+        </view>
+      </picker>
+  </view>
+-->
+  <view class="order-details white-bg">
+    <text>订单详情</text>
+    <view class="order-details__foodItem" wx:for="{{orderLists}}" wx:for-item="orderList" wx:for-index="key">
+      <view class="order-details__foodName">{{orderList.foodName}}</view>
+      <view class="order-details__foodQuantity">x {{orderList.foodQuantity}}</view>
+      <view class="order-details__foodPrice">{{orderList.foodPrice_str}}</view>
+
+    </view>
+
+    <view class="order-details__tax">
+      <view class="order-details__foodTaxName">税(Tax)</view>
+      <view class="order-details__foodTax">x10%</view>
+      <view class="order-details__foodTaxPrice">{{orderTax_str}}</view>
+    </view>
+   
+
+<!--
+    <view class="order-details__discountItems" wx:for="{{discountItems}}" wx:for-item="item" wx:for-index="key">
+      <view class="order-details__discountName">{{item.key}}</view>
+      <view class="order-details__discountPrice">-￥{{item.data}}</view>
+    </view>
+-->
+
+  </view>
+
+
+  <view class="order-mark white-bg">
+    <text class="order-mark__title">电话号码</text>
+    <input bindinput="hp_input" class="order-hp__textarea" placeholder="请确保填写的电话号码正确，可以接通，我们要先电话确认" />
+  </view>
+
+  <view class="order-mark white-bg">
+    <text class="order-mark__title">送餐地址</text>
+    <input class="order-mark__textarea" placeholder="请输入正确的送餐地址" bindinput="addr_input"/>
+  </view>
+
+  <view class="order-mark white-bg">
+    <text class="order-mark__title">备注</text>
+    <input class="order-mark__textarea" placeholder="填写口味等信息，比如少辣" bindinput="remark_input"/>
+  </view>
+
+
+
+
+</view>
+
+<view class="footer">
+  <view class="footer__totalPrice">总价:{{orderPrice_str}}</view>
+  <navigator class="footer__confirm" url="../result/result" bindtap="submitOrder" open-type="redirect">确认下单</navigator>
+</view>
